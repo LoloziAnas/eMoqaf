@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Elmo9af</string>
+    <string name="ic_title_home">Home</string>
+    <string name="ic_titre_compte">Compte</string>
+    <string name="ic_titre_paiment">Paiment</string>
+    <string name="elmo9af">Elmo9af</string>
+    <string name="deconnecter">deconnecter</string>
+</resources>
