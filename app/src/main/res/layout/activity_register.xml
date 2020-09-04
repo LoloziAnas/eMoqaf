@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backlogin"
     android:orientation="vertical"
     android:padding="50dp"
-    tools:context=".LoginActivity"
+    tools:context=".RegisterActivity">
 
-    >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -25,15 +24,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:orientation="vertical"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="5dp"
         >
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/usernameField"
-            android:hint="Username"
+            android:hint="Nom de l’utilisateur"
             app:boxBackgroundColor="#F4F4F4"
             style="@style/inputRadius"
             >
@@ -45,8 +44,35 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:hint="E-mail"
+            style="@style/inputRadius"
+            app:boxBackgroundColor="#F4F4F4"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/passwordField"
-            android:hint="password"
+            android:hint="Mot de passe"
+            style="@style/inputRadius"
+            app:boxBackgroundColor="#F4F4F4"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/confirmePasswordField"
+            android:hint="Confirmer Mot de passe"
             style="@style/inputRadius"
             app:boxBackgroundColor="#F4F4F4"
             >
@@ -56,24 +82,35 @@
                 android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:checkedButton="@+id/radio_button_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mot de passe oublié ?"
-            android:textSize="@dimen/sp12"
-            android:textColor="#FFF"
-            android:textAlignment="textEnd"
-            android:layout_gravity="end"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            />
-
+            android:orientation="horizontal"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
             >
-
+        <RadioButton
+            android:id="@+id/radio_button_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Client"
+            android:layout_weight="1"
+            />
+        <RadioButton
+            android:id="@+id/radio_button_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Ouvrier"
+            android:layout_weight="1"
+            />
+        </RadioGroup>
         <Button
             android:id="@+id/bittrexJsonViewButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Connextion"
+            android:text="Valider"
             android:textColor="#000"
             android:textSize="@dimen/sp14"
             style="@style/connexionBtn"
@@ -81,15 +118,15 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vous n’avez pas de compte  ?"
+            android:text="Vous avez un compte ?"
             android:textAlignment="center"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Inscrivez-vous"
+            android:text="Connectez-vous"
             android:textSize="@dimen/sp12"
-            android:textColor="#FFF"
+            android:textColor="#101C60"
             android:textAlignment="center"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             />
