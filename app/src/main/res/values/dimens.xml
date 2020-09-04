@@ -24,4 +24,6 @@
     <dimen name="sp12">12sp</dimen>
     <dimen name="sp24">24sp</dimen>
     <dimen name="sp18">18sp</dimen>
+
+    <dimen name="radius20">20dp</dimen>
 </resources>

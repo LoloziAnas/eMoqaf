@@ -24,4 +24,16 @@
     <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textColor">@color/colorTabText</item>
     </style>
+    <style name="inputRadius" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusBottomStart" >@dimen/radius20</item>
+        <item name="boxCornerRadiusBottomEnd" >@dimen/radius20</item>
+        <item name="boxCornerRadiusTopStart" >@dimen/radius20</item>
+        <item name="boxCornerRadiusTopEnd" >@dimen/radius20</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+    <style name="connexionBtn" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">#CCEAFF</item>
+        <item name="android:bottomLeftRadius">50dp</item>
+
+    </style>
 </resources>

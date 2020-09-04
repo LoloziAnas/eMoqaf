@@ -22,7 +22,7 @@
             android:icon="@drawable/ic_menu_payment"
             android:title="@string/deconnecter" />
     </group>
-    <group t>
+    <group>
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_menu_payment"
