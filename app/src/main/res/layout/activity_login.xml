@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/backlogin"
     android:orientation="vertical"
-    android:padding="50dp"
+    android:padding="40dp"
     tools:context=".LoginActivity"
-
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,16 +17,16 @@
         android:orientation="horizontal"
         >
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@drawable/logo"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:orientation="vertical"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="180dp"
         >
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -78,19 +77,23 @@
             android:textSize="@dimen/sp14"
             style="@style/connexionBtn"
             />
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vous n’avez pas de compte  ?"
+            android:text="Vous n’avez pas de compte ?"
             android:textAlignment="center"
             />
         <Button
+            android:id="@+id/registerBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Inscrivez-vous"
             android:textSize="@dimen/sp12"
             android:textColor="#FFF"
             android:textAlignment="center"
+            android:onClick="registerBtnClick"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             />
     </LinearLayout>
