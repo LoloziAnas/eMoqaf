@@ -8,9 +8,10 @@
     android:orientation="vertical"
     android:padding="40dp"
     tools:context=".LoginActivity"
+    android:gravity="center"
     >
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
@@ -21,80 +22,77 @@
             android:layout_height="150dp"
             android:src="@drawable/logo"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:orientation="vertical"
-        android:layout_marginTop="180dp"
-        >
+        android:orientation="vertical">
+
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/usernameField"
-            android:hint="Username"
-            app:boxBackgroundColor="#F4F4F4"
             style="@style/inputRadius"
-            >
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Username"
+            app:boxBackgroundColor="#F4F4F4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordField"
-            android:hint="password"
             style="@style/inputRadius"
-            app:boxBackgroundColor="#F4F4F4"
-            >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password"
+            app:boxBackgroundColor="#F4F4F4">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mot de passe oublié ?"
-            android:textSize="@dimen/sp12"
-            android:textColor="#FFF"
-            android:textAlignment="textEnd"
             android:layout_gravity="end"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            />
+            android:text="Mot de passe oublié ?"
+            android:textAlignment="textEnd"
+            android:textColor="#FFF"
+            android:textSize="@dimen/sp12" />
 
-            >
+        >
 
         <Button
             android:id="@+id/bittrexJsonViewButton"
+            style="@style/connexionBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Connextion"
             android:textColor="#000"
-            android:textSize="@dimen/sp14"
-            style="@style/connexionBtn"
-            />
+            android:textSize="@dimen/sp14" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Vous n’avez pas de compte ?"
-            android:textAlignment="center"
-            />
+            android:textAlignment="center" />
+
         <Button
             android:id="@+id/registerBtn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Inscrivez-vous"
-            android:textSize="@dimen/sp12"
-            android:textColor="#FFF"
-            android:textAlignment="center"
             android:onClick="registerBtnClick"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            />
+            android:text="Inscrivez-vous"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="@dimen/sp12" />
     </LinearLayout>
 </LinearLayout>
