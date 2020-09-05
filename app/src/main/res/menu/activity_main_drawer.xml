@@ -2,7 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-<<<<<<< HEAD
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_home"
@@ -25,11 +24,10 @@
     </group>
     <group>
         <item
-            android:id="@+id/nav_logout"
+            android:id="@+id/nav_logout2"
             android:icon="@drawable/ic_menu_payment"
             android:title="@string/deconnecter" />
-=======
-        <item android:id="@+id/nav_home"
+        <item android:id="@+id/nav_home2"
             android:title="Home"
             android:icon="@drawable/ic_home"
             />
@@ -45,7 +43,6 @@
             android:title="Payment"
             android:icon="@drawable/ic_payment"
             />
->>>>>>> 50b46defef02550d0d829108e05dcfc133fd1b86
     </group>
     <item android:title="Communicate">
         <menu>
