@@ -63,6 +63,7 @@
             android:textColor="#FFF"
             android:textAlignment="textEnd"
             android:layout_gravity="end"
+            android:onClick="forgetPasword"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             />
 
