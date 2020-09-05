@@ -5,4 +5,7 @@
     <string name="ic_titre_paiment">Paiment</string>
     <string name="elmo9af">Elmo9af</string>
     <string name="deconnecter">deconnecter</string>
+
+    <string name="open_navigation_drawer">Open navigation drawer</string>
+    <string name="close_navigation_drawer">Close navigation drawer</string>
 </resources>
