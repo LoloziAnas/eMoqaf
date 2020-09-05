@@ -64,9 +64,10 @@
             android:text="Mot de passe oublié ?"
             android:textAlignment="textEnd"
             android:textColor="#FFF"
-            android:textSize="@dimen/sp12" />
+            android:textSize="@dimen/sp12"
+            android:onClick="forgetPasword"
+            />
 
-        >
 
         <Button
             android:id="@+id/bittrexJsonViewButton"
