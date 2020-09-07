@@ -50,6 +50,7 @@
             android:hint="password"
             app:boxBackgroundColor="#F4F4F4"
             app:passwordToggleEnabled="true"
+
             >
 
             <com.google.android.material.textfield.TextInputEditText

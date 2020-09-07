@@ -30,15 +30,20 @@
         <item name="boxCornerRadiusTopStart" >@dimen/radius20</item>
         <item name="boxCornerRadiusTopEnd" >@dimen/radius20</item>
         <item name="android:layout_marginTop">20dp</item>
+
     </style>
     <style name="connexionBtn" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
         <item name="backgroundTint">#CCEAFF</item>
-        <item name="android:bottomLeftRadius">50dp</item>
-        <item name="android:bottomRightRadius">50dp</item>
-        <item name="android:topLeftRadius">50dp</item>
-        <item name="android:topRightRadius">50dp</item>
-        <item name="cornerRadius">50dp</item>
         <item name="android:background">@drawable/courned_layout</item>
     </style>
 
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
 </resources>

@@ -6,13 +6,13 @@
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:cardElevation="5dp"
-
+        android:elevation="1px"
         app:cardCornerRadius="20dp"
+
         >
 
 
@@ -21,7 +21,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/backlogin"
+                android:scaleType="fitXY"
+                android:elevation="1px"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,26 +58,35 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginLeft="12dp"
+                    android:elevation="1px"
                     android:text="description description description description description description description description description description description description description description description "
 
                     android:textColor="?android:attr/textColorSecondary"
                     />
-                <TextView
-                    android:id="@+id/offreClient"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Nom prenom"
-                    android:textColor="?android:attr/textColorSecondary"
-                    />
-                <TextView
-                    android:id="@+id/offreDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="1h ago"
-                    android:textColor="?android:attr/textColorSecondary"
-                    />
+                    android:layout_marginTop="12dp">
+                    <TextView
+                        android:id="@+id/offreClient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Nom prenom"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="?android:attr/textColorSecondary"
+                        />
+                    <TextView
+                        android:id="@+id/offreDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="1h ago"
+                        android:layout_alignParentRight="true"
+                        android:textColor="?android:attr/textColorSecondary"
+                        />
+                </RelativeLayout>
 
             </LinearLayout>
 
