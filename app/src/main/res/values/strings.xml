@@ -8,4 +8,11 @@
 
     <string name="open_navigation_drawer">Open navigation drawer</string>
     <string name="close_navigation_drawer">Close navigation drawer</string>
+    <string name="ic_title_profile">Profile</string>
+    <string name="ic_title_chat">Chat</string>
+    <string name="ic_title_payment">Payment</string>
+    <string name="ic_title_logout">Logout</string>
+    <string name="ic_title_about_us">About Us</string>
+    <string name="ic_title_privacy_policy">Privacy Policy</string>
+    <string name="logo_of_app">Logo of app</string>
 </resources>

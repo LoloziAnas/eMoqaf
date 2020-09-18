@@ -1,7 +1,6 @@
-package com.lzi.elmo9af;
+package com.lzi.elmo9af.fragment;
 
 import android.os.Bundle;
-import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +8,9 @@ import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
 
-import com.lzi.elmo9af.Classes.User;
-import com.lzi.elmo9af.listesModels.MessageInbox_View;
+import com.lzi.elmo9af.R;
+import com.lzi.elmo9af.entities.User;
+import com.lzi.elmo9af.adapters.MessageInbox_View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,10 +28,10 @@ public class inboxFragment extends Fragment {
 
     private void chargeMessages() {
         inboxMessages = (ListView) getActivity().findViewById(R.id.inbox_Messages);
-        List<com.lzi.elmo9af.Classes.Message> messages = new ArrayList<com.lzi.elmo9af.Classes.Message>();
+        List<com.lzi.elmo9af.entities.Message> messages = new ArrayList<com.lzi.elmo9af.entities.Message>();
 
         for(int i=1;i<10;i++){
-            com.lzi.elmo9af.Classes.Message message = new com.lzi.elmo9af.Classes.Message(i,new User(),new User(),"Message Message Message "+i,"12:"+(10+i));
+            com.lzi.elmo9af.entities.Message message = new com.lzi.elmo9af.entities.Message(i,new User(),new User(),"Message Message Message "+i,"12:"+(10+i));
             messages.add(message);
         }
 

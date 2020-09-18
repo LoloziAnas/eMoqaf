@@ -9,15 +9,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.google.android.material.navigation.NavigationView;
-import com.lzi.elmo9af.Classes.Offre;
-import com.lzi.elmo9af.listesModels.Offre_View;
+import com.lzi.elmo9af.entities.Offre;
+import com.lzi.elmo9af.adapters.Offre_View;
 
 import java.util.ArrayList;
 import java.util.Calendar;

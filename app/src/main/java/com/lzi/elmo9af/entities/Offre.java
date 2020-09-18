@@ -1,4 +1,4 @@
-package com.lzi.elmo9af.Classes;
+package com.lzi.elmo9af.entities;
 
 import java.util.Date;
 

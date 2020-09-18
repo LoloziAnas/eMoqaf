@@ -1,4 +1,4 @@
-package com.lzi.elmo9af.Classes;
+package com.lzi.elmo9af.entities;
 
 public class User {
     private int id;

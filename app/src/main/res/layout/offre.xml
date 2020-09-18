@@ -23,13 +23,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@drawable/backlogin"
-                android:scaleType="fitXY"
-                android:elevation="1px"
-                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

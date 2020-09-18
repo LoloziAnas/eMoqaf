@@ -22,13 +22,6 @@
     </androidx.viewpager.widget.ViewPager>
 
 
-    <ListView
-        android:id="@+id/news_offre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/navigationButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_goneMarginBottom="4px"></ListView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationButton"

@@ -1,4 +1,4 @@
-package com.lzi.elmo9af.listesModels;
+package com.lzi.elmo9af.adapters;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.lzi.elmo9af.Classes.Offre;
+import com.lzi.elmo9af.entities.Offre;
 import com.lzi.elmo9af.R;
 
 import java.text.SimpleDateFormat;
