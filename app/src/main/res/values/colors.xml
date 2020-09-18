@@ -31,4 +31,8 @@
 
     <color name="nav_bar_start">#7db1ec</color>
     <color name="nav_bar_end">#002e5b</color>
+
+    <color name="byad">#FFF</color>
+
+    <color name="r_message">#3E005689</color>
 </resources>
