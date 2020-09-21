@@ -15,8 +15,13 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
+import com.lzi.elmo9af.adapters.CategoryPagerAdapter;
+import com.lzi.elmo9af.adapters.OffreAdapter;
 import com.lzi.elmo9af.entities.Offre;
-import com.lzi.elmo9af.adapters.Offre_View;
+import com.lzi.elmo9af.fragment.CategoryFragment;
+import com.lzi.elmo9af.fragment.HomeFragment;
+import com.lzi.elmo9af.utils.MyTab;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -28,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private DrawerLayout drawerLayout;
     private ViewPager viewPager;
+    private TabLayout tabLayout;
+    private List<MyTab> tabs;
 
     //Mouad
     ListView listView;
@@ -45,8 +52,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        tabLayout = findViewById(R.id.sliding_tabs);
+
         // Find the view pager that will allow the user to swipe between fragments
         viewPager = findViewById(R.id.viewpager);
+        tabLayout.setupWithViewPager(viewPager);
+
 
         NavigationView navigationView = findViewById(R.id.nav_view);
 
@@ -55,17 +66,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         onNavigationItemSelected(navigationView.getMenu().getItem(0).setChecked(true));
 
+        tabs = new ArrayList<>();
+        tabs = getTabs();
 
+        CategoryPagerAdapter pagerAdapter = new CategoryPagerAdapter(this,tabs,getSupportFragmentManager());
+        viewPager.setAdapter(pagerAdapter);
 
         // Mouad
-        listView = findViewById(R.id.news_offre);
+        listView = findViewById(R.id.lv_offres);
         getAllNewOffre();
 
     }
 
+    private List<MyTab> getTabs(){
+        List<MyTab> tabs = new ArrayList<>();
+        tabs.add(new MyTab("Home", new HomeFragment()));
+
+        return tabs;
+    }
+
     private void getAllNewOffre() {
         List<Offre> listOffre= Offres();
-        Offre_View offre_view = new Offre_View(getLayoutInflater(),listOffre);
+        OffreAdapter offre_view = new OffreAdapter(getLayoutInflater(),listOffre);
         listView.setAdapter(offre_view);
 
     }
@@ -109,11 +131,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        return true;
-    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
