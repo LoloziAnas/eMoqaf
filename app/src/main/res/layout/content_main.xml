@@ -13,17 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/content_frame"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </FrameLayout>
     </androidx.viewpager.widget.ViewPager>
 
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <!--<com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationButton"
         style="@style/TextAppearance.AppCompat.Menu"
         android:layout_width="match_parent"
@@ -33,6 +27,18 @@
         app:itemBackground="@color/byad"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/buttom_navigation_menu" />
-
+    <ListView
+        android:id="@+id/news_offre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/navigationButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="100dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="100dp"
+        android:dividerHeight="30dp"
+        android:divider="#FFFFFFFF"
+        app:layout_goneMarginBottom="4px"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

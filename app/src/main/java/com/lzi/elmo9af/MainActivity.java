@@ -16,12 +16,16 @@ import android.widget.ListView;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
-import com.lzi.elmo9af.adapters.CategoryPagerAdapter;
-import com.lzi.elmo9af.adapters.OffreAdapter;
+//import com.lzi.elmo9af.adapters.CategoryPagerAdapter;
+//import com.lzi.elmo9af.adapters.OffreAdapter;
+import com.lzi.elmo9af.adapters.My_ViewPagerAdapter;
 import com.lzi.elmo9af.entities.Offre;
-import com.lzi.elmo9af.fragment.CategoryFragment;
+import com.lzi.elmo9af.fragment.ChatFragment;
 import com.lzi.elmo9af.fragment.HomeFragment;
-import com.lzi.elmo9af.utils.MyTab;
+import com.lzi.elmo9af.fragment.PaymentFragment;
+//import com.lzi.elmo9af.fragment.CategoryFragment;
+//import com.lzi.elmo9af.fragment.HomeFragment;
+//import com.lzi.elmo9af.utils.MyTab;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerLayout;
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private List<MyTab> tabs;
+    //private List<MyTab> tabs;
 
     //Mouad
     ListView listView;
@@ -57,8 +61,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Find the view pager that will allow the user to swipe between fragments
         viewPager = findViewById(R.id.viewpager);
         tabLayout.setupWithViewPager(viewPager);
-
-
         NavigationView navigationView = findViewById(R.id.nav_view);
 
         assert navigationView != null;
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         onNavigationItemSelected(navigationView.getMenu().getItem(0).setChecked(true));
 
-        tabs = new ArrayList<>();
+        /*tabs = new ArrayList<>();
         tabs = getTabs();
 
         CategoryPagerAdapter pagerAdapter = new CategoryPagerAdapter(this,tabs,getSupportFragmentManager());
@@ -74,33 +76,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Mouad
         listView = findViewById(R.id.lv_offres);
-        getAllNewOffre();
+        getAllNewOffre();*/
 
+        setUpViewPager(viewPager);
+        tabLayout.setTabMode(TabLayout.MODE_FIXED);
+        tabLayout.setupWithViewPager(viewPager);
+        setTabIcon();
     }
 
-    private List<MyTab> getTabs(){
+   /* private List<MyTab> getTabs(){
         List<MyTab> tabs = new ArrayList<>();
         tabs.add(new MyTab("Home", new HomeFragment()));
 
         return tabs;
-    }
+    }*/
 
-    private void getAllNewOffre() {
+    /*private void getAllNewOffre() {
         List<Offre> listOffre= Offres();
         OffreAdapter offre_view = new OffreAdapter(getLayoutInflater(),listOffre);
         listView.setAdapter(offre_view);
 
-    }
+    }*/
 
     private List<Offre> Offres(){
         List<Offre> listOffre = new ArrayList<Offre>();
         Date date = Calendar.getInstance().getTime();
-        /*for (int o = 1 ;o<=4;o++){
-
-            Offre offre = new Offre(o,"Offre"+o,"description description description description","Clien "+ o, date);
-            listOffre.add(offre);
-            Log.v("my" ,"o = "+ o);
-        }*/
 
         listOffre.add(new Offre(1,"Offre"+1,"description description description description","Clien "+ 1, date));
         listOffre.add(new Offre(1,"Offre"+1,"description description description description","Clien "+ 1, date));
@@ -110,6 +110,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         listOffre.add(new Offre(1,"Offre"+1,"description description description description","Clien "+ 1, date));
 
         return listOffre;
+    }
+    private void setUpViewPager(ViewPager viewPager) {
+        My_ViewPagerAdapter vpa = new My_ViewPagerAdapter(getSupportFragmentManager());
+        vpa.addFragment(new HomeFragment(),"Home");
+        vpa.addFragment(new ChatFragment(),"Disc");
+        vpa.addFragment(new PaymentFragment(),"Payment");
+        viewPager.setAdapter(vpa);
+    }
+    private void setTabIcon(){
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_home);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_chat);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_payment);
     }
 //===============================
 

@@ -1,93 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">-->
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardElevation="5dp"
+    android:elevation="1px"
+    app:cardCornerRadius="5dp"
 
-    <com.google.android.material.card.MaterialCardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <!-- Title, secondary and supporting text -->
+    <TextView
+        android:id="@+id/offreTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        app:cardElevation="5dp"
-        android:elevation="1px"
-        app:cardCornerRadius="20dp"
-
+        android:text="Titre"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:background="@color/colorPrimaryDark"
+        android:padding="5dp"
+        android:textColor="#FFF"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
         >
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/offreService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="plombier"
+                android:textColor="?android:attr/textColorSecondary"
+                />
+            <TextView
+                android:id="@+id/offreDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="12dp"
+                android:elevation="1px"
+                android:text="description description description description description description description description description description description description description description description "
 
-            <LinearLayout
+                android:textColor="?android:attr/textColorSecondary"
+                />
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <!-- Title, secondary and supporting text -->
+                android:layout_marginTop="12dp">
                 <TextView
-                    android:id="@+id/offreTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Titre"
-                    android:textSize="24dp"
-                    android:textStyle="bold"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
-                    />
-                <TextView
-                    android:id="@+id/offreService"
+                    android:id="@+id/offreClient"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="plombier"
+                    android:text="Nom prenom"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
                     android:textColor="?android:attr/textColorSecondary"
                     />
                 <TextView
-                    android:id="@+id/offreDescription"
+                    android:id="@+id/offreDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginLeft="12dp"
-                    android:elevation="1px"
-                    android:text="description description description description description description description description description description description description description description description "
-
+                    android:layout_marginTop="8dp"
+                    android:text="1h ago"
+                    android:layout_alignParentRight="true"
                     android:textColor="?android:attr/textColorSecondary"
                     />
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp">
-                    <TextView
-                        android:id="@+id/offreClient"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Nom prenom"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:textColor="?android:attr/textColorSecondary"
-                        />
-                    <TextView
-                        android:id="@+id/offreDate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="1h ago"
-                        android:layout_alignParentRight="true"
-                        android:textColor="?android:attr/textColorSecondary"
-                        />
-                </RelativeLayout>
-
-            </LinearLayout>
-
-
+            </RelativeLayout>
 
         </LinearLayout>
 
-    </com.google.android.material.card.MaterialCardView>
-<!--</LinearLayout>-->
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

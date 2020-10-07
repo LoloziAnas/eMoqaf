@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:gravity="center"
     tools:context=".SplashScreenActivity">
-
-
     <ImageView
         android:id="@+id/iv_logo"
         android:layout_width="164dp"
@@ -16,5 +15,26 @@
         android:src="@drawable/logo"
         android:contentDescription="@string/logo_of_app"/>
 
-
+    <TextView
+        android:id="@+id/tx_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="E-Mo9af"
+        android:textAlignment="center"
+        android:textSize="48dp"
+        android:textColor="@color/colorPrimaryDark"
+        app:fontFamily="@font/bungee_inline" />
+    <TextView
+        android:id="@+id/slogon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        android:text="time is money"
+        android:textAlignment="textEnd"
+        android:layout_gravity="end"
+        android:paddingRight="20dp"
+        android:textSize="12dp"
+        android:textColor="@color/colorPrimary"
+        app:fontFamily="@font/bungee_inline" />
 </LinearLayout>
